@@ -63,7 +63,9 @@
 
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="{{ asset('js/game.js') }}"></script>
-
+<script>
+    const gameData = json_encode($gameData); // Utiliser json_encode directement
+</script>
 </body>
 
 </html>

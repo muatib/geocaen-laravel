@@ -15,7 +15,7 @@ function init() {
 document.addEventListener("DOMContentLoaded", init);
 
 function updateContent() {
-  if (gameData) {
+  if (data) {
     const gameContent = gameData[currentIndex];
     console.log(gameContent);
     const game1Txt = document.querySelector("#game1__txt");
