@@ -1,0 +1,39 @@
+.game1-logo {
+    filter: drop-shadow($gold 1px 1px 1px);
+    display: block;
+    margin: 2rem auto;
+  }
+  .game1-ttl {
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    color: $gold;
+    filter: drop-shadow(black 2px 2px);
+    font-size: 1.7rem;
+  }
+
+  .game1__img2 {
+    bottom: 8rem;
+    left: 15rem;
+  }
+  .game1-img1 {
+    left: 1.5rem;
+    bottom: 1rem;
+  }
+  .game1-txt {
+    margin-bottom: -4rem;
+  }
+  .game__footer {
+    background-color: $trans-blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-top: $blue-shadow 2px solid;
+    margin-top: 1rem;
+  }
+
+  .game-btn {
+    margin-bottom: 3rem;
+  }
