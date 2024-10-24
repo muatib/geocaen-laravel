@@ -1,4 +1,4 @@
-@include('header')
+@include('components.header')
 
 <main>
     <section id="login" class="box__style form-box">
@@ -31,6 +31,6 @@
     <a class="acc-lnk" href="/register">Créer un compte</a>
 </main>
 
-@include('footer')
+@include('components.footer')
 
-@vite(['resources/js/app.js'])
+
