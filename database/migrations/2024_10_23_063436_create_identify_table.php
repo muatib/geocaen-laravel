@@ -13,7 +13,7 @@ return new class extends Migration
 {
     Schema::create('identify', function (Blueprint $table) {
         $table->foreignId('user_id')->constrained('users');
-        $table->foreignId('session_id')->constrained('game_sessions'); // Changé ici
+        $table->foreignId('session_id')->constrained('game_sessions');
         $table->primary(['user_id', 'session_id']);
         $table->timestamps();
     });

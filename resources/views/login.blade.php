@@ -1,7 +1,7 @@
 @include('components.header')
 
 <main>
-    <section id="login" class="box__style form-box">
+    <section class="log-container" id="login" class="box__style form-box">
         <h2 class="users-ttl">Identifiez vous</h2>
         @if ($errors->any())
             <div class="error-message">
@@ -14,7 +14,7 @@
         @endif
 
         {{-- <form action="{{ route('login') }}#login" method="post"> --}}
-            <form action="{{ route('login.post') }}" method="post">
+            <form action="{{ route('login') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -28,7 +28,7 @@
         </form>
     </section>
     <p class="login-txt">Vous n'avez pas de compte ? :</p>
-    <a class="acc-lnk" href="/register">Créer un compte</a>
+    <a class="acc-lnk" href="{{ route('create-acc') }}">Créer un compte</a>
 </main>
 
 @include('components.footer')

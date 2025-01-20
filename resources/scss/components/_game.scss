@@ -28,8 +28,12 @@
   }
   .game__img3 {
     filter: drop-shadow($red 2px 2px);
+    margin-bottom: 5rem;
   }
-  .game__img4 {
-    margin: 0.5rem 0 0 6rem;
+  .game__img1:hover,
+  .game__img2:hover,
+  .game__img3:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
   }
 

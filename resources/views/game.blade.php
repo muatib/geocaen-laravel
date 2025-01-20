@@ -21,7 +21,7 @@
         </a>
     </div>
 
-    <img class="game__img4" src="{{ asset('img/famille detective-sm.webp') }}" alt="famille detective" />
+
 </main>
 
 @include('components.footer')

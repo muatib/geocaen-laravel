@@ -1,5 +1,5 @@
 @include('components.header')
-
+@vite('resources/js/slide.js')
 <main>
     <img class="top__img" src="{{ asset('img/shadow.png.png') }}" alt="ombre" />
 

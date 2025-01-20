@@ -4,76 +4,102 @@
     width: 80%;
     margin: 50px auto;
     color: white;
-  }
-  .login-header {
-    margin-bottom: 5rem;
-  }
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
+}
 
-  .form-group label {
+.login-header {
+    margin-bottom: 5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.log-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    filter: drop-shadow($clear-blue 2px 2px);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 19rem;
+    background-color: $trans-blue;
+    line-height: 1.5rem;
+    margin: 7rem auto;
+}
+
+.form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-  }
-  .form-inp {
+}
+.form-group textarea {
+    resize: none;
+
+}
+.form-inp {
     margin-bottom: 1rem;
-  }
-  .users-ttl {
+}
+
+.users-ttl {
     text-align: center;
     margin-bottom: 1.5rem;
-  }
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group input[type="password"],
-  .form-group input[type="password-check"],
-  .form-group textarea {
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="password-check"],
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  .password-hint {
+}
+
+.password-hint {
     font-size: 0.8rem;
     color: $white;
     font-style: italic;
-  }
+    display: block;
+    margin-top: 5px;
+}
 
-  .error-message,
-  .success-message {
+.error-message,
+.success-message {
     text-align: center;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 5px;
-  }
+}
 
-  .error-message {
+.error-message {
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
-  }
+}
 
-  .success-message {
+.success-message {
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
-  }
-  .acc-lnk {
+}
+
+.acc-lnk {
     color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
-    margin-bottom: 4rem;
-  }
+    margin-bottom: 9rem;
+}
 
-  .login-footer {
+.login-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-  }
-  .form-term {
+}
+
+.form-term {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -83,13 +109,47 @@
     font-size: 0.8rem;
     text-align: center;
     margin-bottom: 1rem;
-   }
-   .term-lnk{
-    color: white;
-   }
+}
 
-  .login-txt {
+.term-lnk {
+    color: white;
+}
+
+.login-txt {
     font-family: "RobotoCondensed";
     font-weight: bold;
     text-align: center;
-  }
+    margin-top: -2rem;
+}
+
+/* Nouveaux styles pour le toggle de mot de passe */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333; /* Changé de white à gris foncé */
+    opacity: 1; /* Augmenté l'opacité */
+    z-index: 10; /* Assuré que l'icône est au-dessus */
+    padding: 5px; /* Ajouté du padding pour une meilleure zone de clic */
+}
+
+.toggle-password:hover {
+    color: #000; /* Plus foncé au hover */
+}
+
+/* Ajusté le padding du champ password pour l'icône */
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 35px; /* Espace pour l'icône */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

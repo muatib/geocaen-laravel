@@ -13,22 +13,47 @@
     position: sticky;
     width: 100%;
     z-index: 2;
-  }
-  .header__logo {
+}
+.header__logo {
     position: relative;
     left: 20%;
     filter: drop-shadow($clear-blue 1px 1px);
-  }
-  .header-user-img {
+}
+.user-profile-container {
     position: relative;
-    left: 30%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    bottom: 3%;
-  }
+.header-user-img {
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  // MENU BURGER
+    .avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
 
-  .menu__toggle {
+.user-pseudo {
+    color: $white;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+}
+
+// MENU BURGER
+
+.menu__toggle {
     height: 27px;
     width: 30px;
     margin: 50px;
@@ -40,133 +65,133 @@
     .menu__toggle-bar,
     .menu__toggle-bar:before,
     .menu__toggle-bar:after {
-      background: $white;
-      // filter: drop-shadow($blue-shadow 1px 1px);
-      display: block;
-      height: 2px;
-      opacity: 1;
-      position: absolute;
-      transition: 0.3s ease-in-out;
+        background: $white;
+        display: block;
+        height: 2px;
+        opacity: 1;
+        position: absolute;
+        transition: 0.3s ease-in-out;
     }
 
     .menu__toggle-bar:before,
     .menu__toggle-bar:after {
-      content: "";
+        content: "";
     }
     .menu__toggle-bar:before {
-      left: 0px;
-      top: -10px;
-      width: 27px;
+        left: 0px;
+        top: -10px;
+        width: 27px;
     }
     .menu__toggle-bar {
-      right: 0px;
-      top: 13px;
-      width: 27px;
-    }
-    .menu__toggle-bar:after {
-      left: 0px;
-      top: 10px;
-      width: 27px;
-    }
-    &.close {
-      .menu__toggle-bar:before {
-        top: 0px;
-        transform: rotate(90deg);
-        width: 27px;
-      }
-      .menu__toggle-bar {
-        transform: rotate(-45deg);
+        right: 0px;
         top: 13px;
         width: 27px;
-      }
-      .menu__toggle-bar:after {
-        top: 0px;
-        left: 0;
-        transform: rotate(90deg);
-        opacity: 0;
-        width: 0;
-      }
     }
-  }
-  // OVERLAY MENU BURGER
+    .menu__toggle-bar:after {
+        left: 0px;
+        top: 10px;
+        width: 27px;
+    }
+    &.close {
+        .menu__toggle-bar:before {
+            top: 0px;
+            transform: rotate(90deg);
+            width: 27px;
+        }
+        .menu__toggle-bar {
+            transform: rotate(-45deg);
+            top: 13px;
+            width: 27px;
+        }
+        .menu__toggle-bar:after {
+            top: 0px;
+            left: 0;
+            transform: rotate(90deg);
+            opacity: 0;
+            width: 0;
+        }
+    }
+}
+// OVERLAY MENU BURGER
 
-  #menu {
+#menu {
     z-index: 1;
-    min-width: 100%;
-    min-height: 70%;
+    min-width: 70%;
+    min-height: 50%;
     position: fixed;
     top: 0;
     height: 0;
+    right: 0;
     visibility: hidden;
     opacity: 0;
     text-align: center;
-    padding-top: 20px;
+
     transition: all 0.2s ease-in-out;
 
     &.overlay {
-      visibility: visible;
-      opacity: 1;
-      padding-top: 100px;
-      background: rgba(0, 0, 0, 0.932);
-      border-radius: 1rem;
+        visibility: visible;
+        opacity: 1;
+        padding-top: 100px;
+        background-color: $burger;
+        border-bottom-left-radius: 10px;
     }
     .menu__container {
-      padding: 0;
+        padding: 0;
     }
     .menu__container-lnk {
-      color: $gold;
-      display: block;
-      font-size: 28px;
-      margin-bottom: 30px;
-      margin-left: 15px;
-      text-decoration: none;
-      text-align: left;
+        color: $gold;
+        display: block;
+        font-size: 28px;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        text-decoration: none;
+        text-align: left;
     }
-  }
-  @media screen and (max-width: 899px) {
+}
+@media screen and (max-width: 899px) {
     .nav__lg-lst {
-      display: none;
+        display: none;
     }
-  }
-  @media screen and (min-width: 550px) {
+}
+@media screen and (min-width: 550px) {
     .header__logo {
-      position: absolute;
-      top: 1rem;
-      left: 45%;
-      filter: drop-shadow($clear-blue 1px 1px);
+        position: absolute;
+        top: 1rem;
+        left: 45%;
+        filter: drop-shadow($clear-blue 1px 1px);
     }
 
     .menu__toggle {
-      position: relative;
+        position: relative;
 
-      height: 27px;
-      width: 30px;
-      overflow: visible;
-      z-index: 2;
+        height: 27px;
+        width: 30px;
+        overflow: visible;
+        z-index: 2;
     }
-  }
-  @media screen and (min-width: 900px) {
+}
+@media screen and (min-width: 900px) {
     .menu__toggle {
-      display: none;
+        display: none;
     }
     .header__img {
-      display: none;
+        display: none;
     }
     .header__logo {
-      left: 5%;
+        left: 5%;
     }
 
     .nav__lg-lst {
-      position: absolute;
-      left: 40%;
-      bottom: 25%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+        position: absolute;
+        left: 40%;
+        bottom: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .nav__lnk {
-      margin: 0 2rem 0 1rem;
-      font-size: 1.5rem;
-      color: $white;
+        margin: 0 2rem 0 1rem;
+        font-size: 1.5rem;
+        color: $white;
     }
-  }
+}
